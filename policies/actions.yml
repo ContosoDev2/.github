@@ -1,0 +1,17 @@
+name: Actions Policy
+description: This policy controls the usage of Github Actions within the organization
+
+resource: organization
+configuration:
+   actions:
+    enabled: true
+    allowGitHubHostedRunners: false
+    allowFromGitHub: true
+    allowAllVerified: true
+    allowedActions:
+     - actions/human.txt@v1
+     - shaOrg/human.txt@sha2
+     - actions/withoutv@2.0.3
+     - EnricoMi/publish-unit-test-result-action/composite@v1
+     - actions/human.txt@release/v1
+     - branch/reference@main
